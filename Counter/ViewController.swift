@@ -8,10 +8,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var decrementButton: UIButton!
+    @IBOutlet weak var incrementButton: UIButton!
+    
+    var count: Int = 0
+    
+    static func make() -> ViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard
+            .instantiateInitialViewController() as! ViewController
+    }
+    
+    @IBAction func tapIncrementButton(_ sender: Any) {
+        count += 1
+        updateView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateView()
+    }
+    
+    private func updateView() {
+        countLabel.text = "\(count)"
     }
 
 

@@ -15,6 +15,7 @@
 		1B5CD0622619990D003F598B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5CD0602619990D003F598B /* LaunchScreen.storyboard */; };
 		1B5CD06D2619990D003F598B /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD06C2619990D003F598B /* CounterTests.swift */; };
 		1B5CD0782619990D003F598B /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0772619990D003F598B /* CounterUITests.swift */; };
+		1B5CD08926199D78003F598B /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD08826199D78003F598B /* MainViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1B5CD0732619990D003F598B /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5CD0772619990D003F598B /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		1B5CD0792619990D003F598B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B5CD08826199D78003F598B /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5CD06C2619990D003F598B /* CounterTests.swift */,
+				1B5CD08826199D78003F598B /* MainViewControllerTests.swift */,
 				1B5CD06E2619990D003F598B /* Info.plist */,
 			);
 			path = CounterTests;
@@ -144,6 +147,8 @@
 			dependencies = (
 			);
 			name = Counter;
+			packageProductDependencies = (
+			);
 			productName = Counter;
 			productReference = 1B5CD0522619990D003F598B /* Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +167,8 @@
 				1B5CD06A2619990D003F598B /* PBXTargetDependency */,
 			);
 			name = CounterTests;
+			packageProductDependencies = (
+			);
 			productName = CounterTests;
 			productReference = 1B5CD0682619990D003F598B /* CounterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +222,8 @@
 				Base,
 			);
 			mainGroup = 1B5CD0492619990D003F598B;
+			packageReferences = (
+			);
 			productRefGroup = 1B5CD0532619990D003F598B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B5CD06D2619990D003F598B /* CounterTests.swift in Sources */,
+				1B5CD08926199D78003F598B /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
