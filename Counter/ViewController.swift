@@ -21,6 +21,11 @@ class ViewController: UIViewController {
             .instantiateInitialViewController() as! ViewController
     }
     
+    @IBAction func tapDecrementButton(_ sender: Any) {
+        count -= 1
+        updateView()
+    }
+    
     @IBAction func tapIncrementButton(_ sender: Any) {
         count += 1
         updateView()
@@ -33,6 +38,8 @@ class ViewController: UIViewController {
     
     private func updateView() {
         countLabel.text = "\(count)"
+        decrementButton.isEnabled = count > 0
+        incrementButton.isEnabled = count < 10
     }
 
 

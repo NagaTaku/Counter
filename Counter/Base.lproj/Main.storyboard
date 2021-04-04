@@ -29,6 +29,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="72"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="tapDecrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJQ-F9-qUM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwS-1U-N9j">
                                         <rect key="frame" x="110" y="0.0" width="31" height="72"/>

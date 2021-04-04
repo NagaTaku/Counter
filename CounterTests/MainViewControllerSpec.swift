@@ -10,6 +10,14 @@ import Quick
 import Nimble
 @testable import Counter
 
+extension UIButton {
+    func tap(repeat: Int = 1) {
+        for _ in 1...`repeat` {
+            self.sendActions(for: .touchUpInside)
+        }
+    }
+}
+
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         var vc: ViewController!
@@ -25,13 +33,65 @@ class MainViewControllerSpec: QuickSpec {
             it("カウントが「0」であること") {
                 expect(vc.countLabel.text).to(equal("0"))
             }
+            
+            it("「-」ボタンが非活性であること") {
+                expect(vc.decrementButton.isEnabled).to(beFalse())
+            }
+            
+            it("「+」ボタンが活性であること") {
+                expect(vc.incrementButton.isEnabled).to(beTrue())
+            }
         }
         
         describe("「＋」ボタンを押した時のテスト") {
             context("初期値が「0」") {
                 it("カウントが「1」になること") {
-                    vc.incrementButton.sendActions(for: .touchUpInside)
+                    vc.incrementButton.tap()
                     expect(vc.countLabel.text).to(equal("1"))
+                }
+                
+                it("カウントが0でなくなるので「-」ボタンが活性になること") {
+                    vc.incrementButton.tap()
+                    expect(vc.decrementButton.isEnabled).to(beTrue())
+                }
+            }
+            
+            context("カウンタが上限値になること") {
+                beforeEach {
+                    vc.incrementButton.tap(repeat: 10)
+                }
+                
+                it("「+」ボタンが非活性になること") {
+                    expect(vc.incrementButton.isEnabled).to(beFalse())
+                }
+            }
+        }
+        
+        describe("「-」ボタンを押した時のテスト") {
+            context("現在値が「1」") {
+                beforeEach {
+                    vc.incrementButton.tap()
+                }
+                
+                it("カウンタが「0」になること") {
+                    vc.decrementButton.tap()
+                    expect(vc.countLabel.text).to(equal("0"))
+                }
+                
+                it("カウンタが下限値なので「-」ボタンが非活性になること") {
+                    vc.decrementButton.tap()
+                    expect(vc.decrementButton.isEnabled).to(beFalse())
+                }
+            }
+            
+            context("現在地が上限値") {
+                beforeEach {
+                    vc.incrementButton.tap(repeat: 10)
+                }
+                
+                it("「+」ボタンが活性になること") {
+                    vc.decrementButton.tap()
+                    expect(vc.incrementButton.isEnabled).to(beTrue())
                 }
             }
         }
