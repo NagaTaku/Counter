@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var incrementButton: UIButton!
     
-    var count: Int = 0
+    var counter = Counter()
     
     static func make() -> ViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapDecrementButton(_ sender: Any) {
-        count -= 1
+        counter.decrement()
         updateView()
     }
     
     @IBAction func tapIncrementButton(_ sender: Any) {
-        count += 1
+        counter.increment()
         updateView()
     }
     
@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     }
     
     private func updateView() {
-        countLabel.text = "\(count)"
-        decrementButton.isEnabled = count > 0
-        incrementButton.isEnabled = count < 10
+        countLabel.text = "\(counter.count)"
+        decrementButton.isEnabled = !counter.isLowerLimit
+        incrementButton.isEnabled = !counter.isUpperLimit
     }
 
 
