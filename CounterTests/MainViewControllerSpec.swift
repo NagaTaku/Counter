@@ -95,5 +95,28 @@ class MainViewControllerSpec: QuickSpec {
                 }
             }
         }
+        
+//        describe("現在値の保存") {
+//            context("現在地が2") {
+//                beforeEach {
+//                    vc.incrementButton.tap(repeat: 2)
+//                    UserDefaults.standard.set(0, forKey: "count")
+//                }
+//
+//                context("「+」ボタンをタップ") {
+//                    it("現在地「3」がUserDefaultsに保存されること") {
+//                        vc.incrementButton.tap()
+//                        expect(UserDefaults.standard.integer(forKey:"count")).to(equal(3))
+//                    }
+//                }
+//
+//                context("「-」ボタンをタップ") {
+//                    it("現在地「1」がUserDefaultsに保存されること") {
+//                        vc.decrementButton.tap()
+//                        expect(UserDefaults.standard.integer(forKey:"count")).to(equal(1))
+//                    }
+//                }
+//            }
+//        }
     }
 }

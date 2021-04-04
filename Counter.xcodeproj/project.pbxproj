@@ -21,6 +21,8 @@
 		1B5CD0B52619A592003F598B /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0B42619A592003F598B /* MainViewControllerSpec.swift */; };
 		1B5CD0BA2619B0C7003F598B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0B92619B0C7003F598B /* Counter.swift */; };
 		1B5CD0BF2619B250003F598B /* CounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0BE2619B250003F598B /* CounterSpec.swift */; };
+		1B5CD0C42619BD44003F598B /* CounterStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0C32619BD44003F598B /* CounterStorageProtocol.swift */; };
+		1B5CD0C92619BEFA003F598B /* CounterStorageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5CD0C82619BEFA003F598B /* CounterStorageDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		1B5CD0B42619A592003F598B /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
 		1B5CD0B92619B0C7003F598B /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		1B5CD0BE2619B250003F598B /* CounterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSpec.swift; sourceTree = "<group>"; };
+		1B5CD0C32619BD44003F598B /* CounterStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStorageProtocol.swift; sourceTree = "<group>"; };
+		1B5CD0C82619BEFA003F598B /* CounterStorageDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStorageDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				1B5CD0602619990D003F598B /* LaunchScreen.storyboard */,
 				1B5CD0632619990D003F598B /* Info.plist */,
 				1B5CD0B92619B0C7003F598B /* Counter.swift */,
+				1B5CD0C82619BEFA003F598B /* CounterStorageDefaults.swift */,
+				1B5CD0C32619BD44003F598B /* CounterStorageProtocol.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B5CD0BA2619B0C7003F598B /* Counter.swift in Sources */,
+				1B5CD0C42619BD44003F598B /* CounterStorageProtocol.swift in Sources */,
+				1B5CD0C92619BEFA003F598B /* CounterStorageDefaults.swift in Sources */,
 				1B5CD05A2619990D003F598B /* ViewController.swift in Sources */,
 				1B5CD0562619990D003F598B /* AppDelegate.swift in Sources */,
 				1B5CD0582619990D003F598B /* SceneDelegate.swift in Sources */,

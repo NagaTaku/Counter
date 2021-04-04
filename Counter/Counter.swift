@@ -7,10 +7,24 @@
 
 import Foundation
 
+class CounterStorageMock: CounterStorage {
+    var latestSaveCount: Int?
+    
+    func save(_ count: Int) {
+        latestSaveCount = count
+    }
+    
+    func get() -> Int {
+        return latestSaveCount ?? 0
+    }
+}
+
 class Counter {
     private (set) var count: Int
+    private let counterStorage: CounterStorage
     
-    init(count: Int = 0) {
+    init(count: Int = 0, counterStorage: CounterStorage = CounterStorageDefaults()) {
+        self.counterStorage = counterStorage
         self.count = count
     }
     var isLowerLimit: Bool { return count <= 0 }
@@ -18,9 +32,11 @@ class Counter {
     
     func increment() {
         count += 1
+        counterStorage.save(count)
     }
     
     func decrement() {
         count -= 1
+        counterStorage.save(count)
     }
 }
